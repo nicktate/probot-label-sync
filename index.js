@@ -3,7 +3,7 @@ const yaml = require('js-yaml')
 
 const Github = require('./lib/github')
 
-const REPO_OR_LABEL_DIR_REGEX = /^\/(labels|repositories)/
+const REPO_OR_LABEL_DIR_REGEX = /^(labels|repositories)\//
 
 const buildLabelArray = (files) => {
   const labels = _.map(files, f => {
@@ -39,9 +39,11 @@ module.exports = (app, Repository = require('./lib/repository')) => {
         const labelPaths = _.map(yaml.safeLoad(r.content).labelGroups, l => `labels/${l}`)
         const repoLabels = buildLabelArray(_.values(_.pick(labels, labelPaths)))
 
-        console.log(`Syncing labels for ${org}/${name}...`)
+        console.info(`Syncing labels for ${org}/${name}...`)
         await Repository.syncLabels(context.github, { owner: org, repo: name }, repoLabels)
       }
+    } else {
+      console.info('No repositories or labels were modified in latest push...')
     }
   })
 }

@@ -1,78 +1,66 @@
 {
   "ref": "refs/heads/master",
-  "before": "b8c22f5f8a07656a424494ac74a70c4f50790feb",
-  "after": "b11feaea964714c9c991abf8f5fec398bbfe6682",
+  "before": "35f4594bda19b9c697a41d97e62a722ea9254040",
+  "after": "44e046da01d524760a880fed66a48cf28706f887",
   "created": false,
   "deleted": false,
   "forced": false,
   "base_ref": null,
-  "compare": "https://github.com/nicktate/probot-label-sync/compare/b8c22f5f8a07...b11feaea9647",
+  "compare": "https://github.com/nicktate/probot-label-sync/compare/35f4594bda19...44e046da01d5",
   "commits": [
     {
-      "id": "b11feaea964714c9c991abf8f5fec398bbfe6682",
-      "tree_id": "3378d90cedd0c0ab0d42055bf20f0490f0b02f18",
+      "id": "44e046da01d524760a880fed66a48cf28706f887",
+      "tree_id": "f4482eb42907b25dc8504f0ce969be07a21f871a",
       "distinct": true,
-      "message": "added label syncing logic",
-      "timestamp": "2019-03-19T13:44:59-04:00",
-      "url": "https://github.com/nicktate/probot-label-sync/commit/b11feaea964714c9c991abf8f5fec398bbfe6682",
+      "message": "usage",
+      "timestamp": "2019-03-19T10:46:48-04:00",
+      "url": "https://github.com/nicktate/probot-label-sync/commit/44e046da01d524760a880fed66a48cf28706f887",
       "author": {
-        "name": "nicktate",
+        "name": "Nick Tate",
         "email": "ntate22@gmail.com",
         "username": "nicktate"
       },
       "committer": {
-        "name": "nicktate",
-        "email": "ntate22@gmail.com",
-        "username": "nicktate"
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "username": "web-flow"
       },
       "added": [
-        "lib/github.js",
-        "repositories/containership/cloud.ui.yaml"
+
       ],
       "removed": [
 
       ],
       "modified": [
-        "app.yml",
-        "index.js",
-        "lib/diffable.js",
-        "lib/labels.js",
-        "lib/repository.js",
-        "repositories/nicktate/dotfiles.yaml"
+        "README.md"
       ]
     }
   ],
   "head_commit": {
-    "id": "b11feaea964714c9c991abf8f5fec398bbfe6682",
-    "tree_id": "3378d90cedd0c0ab0d42055bf20f0490f0b02f18",
+    "id": "44e046da01d524760a880fed66a48cf28706f887",
+    "tree_id": "f4482eb42907b25dc8504f0ce969be07a21f871a",
     "distinct": true,
-    "message": "added label syncing logic",
-    "timestamp": "2019-03-19T13:44:59-04:00",
-    "url": "https://github.com/nicktate/probot-label-sync/commit/b11feaea964714c9c991abf8f5fec398bbfe6682",
+    "message": "usage",
+    "timestamp": "2019-03-19T10:46:48-04:00",
+    "url": "https://github.com/nicktate/probot-label-sync/commit/44e046da01d524760a880fed66a48cf28706f887",
     "author": {
-      "name": "nicktate",
+      "name": "Nick Tate",
       "email": "ntate22@gmail.com",
       "username": "nicktate"
     },
     "committer": {
-      "name": "nicktate",
-      "email": "ntate22@gmail.com",
-      "username": "nicktate"
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "username": "web-flow"
     },
     "added": [
-      "lib/github.js",
-      "repositories/containership/cloud.ui.yaml"
+
     ],
     "removed": [
 
     ],
     "modified": [
-      "app.yml",
-      "index.js",
-      "lib/diffable.js",
-      "lib/labels.js",
-      "lib/repository.js",
-      "repositories/nicktate/dotfiles.yaml"
+      "README.md"
     ]
   },
   "repository": {
@@ -144,17 +132,17 @@
     "releases_url": "https://api.github.com/repos/nicktate/probot-label-sync/releases{/id}",
     "deployments_url": "https://api.github.com/repos/nicktate/probot-label-sync/deployments",
     "created_at": 1553005636,
-    "updated_at": "2019-03-19T15:57:39Z",
-    "pushed_at": 1553017552,
+    "updated_at": "2019-03-19T14:27:18Z",
+    "pushed_at": 1553006809,
     "git_url": "git://github.com/nicktate/probot-label-sync.git",
     "ssh_url": "git@github.com:nicktate/probot-label-sync.git",
     "clone_url": "https://github.com/nicktate/probot-label-sync.git",
     "svn_url": "https://github.com/nicktate/probot-label-sync",
     "homepage": null,
-    "size": 80,
+    "size": 0,
     "stargazers_count": 0,
     "watchers_count": 0,
-    "language": "JavaScript",
+    "language": null,
     "has_issues": false,
     "has_projects": true,
     "has_downloads": true,
@@ -165,11 +153,11 @@
     "archived": false,
     "open_issues_count": 0,
     "license": {
-      "key": "isc",
-      "name": "ISC License",
-      "spdx_id": "ISC",
-      "url": "https://api.github.com/licenses/isc",
-      "node_id": "MDc6TGljZW5zZTEw"
+      "key": "apache-2.0",
+      "name": "Apache License 2.0",
+      "spdx_id": "Apache-2.0",
+      "url": "https://api.github.com/licenses/apache-2.0",
+      "node_id": "MDc6TGljZW5zZTI="
     },
     "forks": 0,
     "open_issues": 0,
