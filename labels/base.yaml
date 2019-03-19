@@ -1,0 +1,52 @@
+labels:
+  - name: status/blocked
+    description: Blocked
+    color: ffcd00
+  - name: status/do-not-merge
+    description: Do not merge
+    color: ffcd00
+  - name: status/needs-retested
+    description: Needs re-tested
+    color: ffcd00
+  - name: status/needs-triaged
+    description: Needs Triaged
+    color: ffcd00
+  - name: status/untested
+    description: Has not been tested
+    color: ffcd00
+  - name: status/wip
+    description: Work in progress
+    color: ffcd00
+  - name: type/bug
+    description: A bug fix
+    color: 00f4cb
+  - name: type/design-doc
+    description: Design Documentation
+    color: 00f4cb
+  - name: type/documentation
+    description: Documentation
+    color: 00f4cb
+  - name: type/feature
+    description: A new feature
+    color: 00f4cb
+  - name: type/maintenance
+    description: Maintenance
+    color: 00f4cb
+  - name: type/mock
+    description: Mocks
+    color: 00f4cb
+  - name: type/optimization
+    description: An optimization
+    color: 00f4cb
+  - name: type/question
+    description: A question
+    color: 00f4cb
+  - name: type/regression
+    description: A regression
+    color: 00f4cb
+  - name: type/technical-debt
+    description: Technical Debt
+    color: 00f4cb
+  - name: Epic
+    description: An Epic
+    color: ffffff

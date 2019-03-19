@@ -1,0 +1,31 @@
+labels:
+  - name: component/auth
+    description: Auth
+    color: f800a7
+  - name: component/autoscaler
+    description: Autoscaler
+    color: f800a7
+  - name: component/backups
+    description: Backups
+    color: f800a7
+  - name: component/plugins
+    description: Plugins
+    color: f800a7
+  - name: component/provision
+    description: Provisioning
+    color: f800a7
+  - name: component/security
+    description: Security
+    color: f800a7
+  - name: component/storage
+    description: Storage
+    color: f800a7
+  - name: component/test
+    description: Testing
+    color: f800a7
+  - name: component/upgrade
+    description: Kubernetes Upgrades
+    color: f800a7
+  - name: component/ux
+    description: UX
+    color: f800a7

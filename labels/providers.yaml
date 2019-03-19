@@ -1,0 +1,16 @@
+labels:
+  - name: provider/aws
+    description: AWS Provider
+    color: 212b35
+  - name: provider/azure
+    description: Azure Provider
+    color: 212b35
+  - name: provider/digitalocean
+    description: DigitalOcean Provider
+    color: 212b35
+  - name: provider/google
+    description: Google Provider
+    color: 212b35
+  - name: provider/packet
+    description: Packet Provider
+    color: 212b35
