@@ -1,0 +1,4 @@
+labelGroups:
+  - base.yaml
+  - components.yaml
+  - providers.yaml
