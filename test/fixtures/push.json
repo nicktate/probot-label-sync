@@ -1,54 +1,22 @@
 {
   "ref": "refs/heads/master",
-  "before": "b8c22f5f8a07656a424494ac74a70c4f50790feb",
-  "after": "b11feaea964714c9c991abf8f5fec398bbfe6682",
+  "before": "5b46f98f19d565dd7c648031a4d4ee2b01287da5",
+  "after": "d0a2cd9114ad77b3a396977effecf34bc15030e9",
   "created": false,
   "deleted": false,
-  "forced": false,
+  "forced": true,
   "base_ref": null,
-  "compare": "https://github.com/nicktate/probot-label-sync/compare/b8c22f5f8a07...b11feaea9647",
+  "compare": "https://github.com/nicktate/probot-label-sync/compare/5b46f98f19d5...d0a2cd9114ad",
   "commits": [
-    {
-      "id": "b11feaea964714c9c991abf8f5fec398bbfe6682",
-      "tree_id": "3378d90cedd0c0ab0d42055bf20f0490f0b02f18",
-      "distinct": true,
-      "message": "added label syncing logic",
-      "timestamp": "2019-03-19T13:44:59-04:00",
-      "url": "https://github.com/nicktate/probot-label-sync/commit/b11feaea964714c9c991abf8f5fec398bbfe6682",
-      "author": {
-        "name": "nicktate",
-        "email": "ntate22@gmail.com",
-        "username": "nicktate"
-      },
-      "committer": {
-        "name": "nicktate",
-        "email": "ntate22@gmail.com",
-        "username": "nicktate"
-      },
-      "added": [
-        "lib/github.js",
-        "repositories/containership/cloud.ui.yaml"
-      ],
-      "removed": [
 
-      ],
-      "modified": [
-        "app.yml",
-        "index.js",
-        "lib/diffable.js",
-        "lib/labels.js",
-        "lib/repository.js",
-        "repositories/nicktate/dotfiles.yaml"
-      ]
-    }
   ],
   "head_commit": {
-    "id": "b11feaea964714c9c991abf8f5fec398bbfe6682",
-    "tree_id": "3378d90cedd0c0ab0d42055bf20f0490f0b02f18",
+    "id": "d0a2cd9114ad77b3a396977effecf34bc15030e9",
+    "tree_id": "2c75f83eb79729d800e91e45db2f4128fec6f173",
     "distinct": true,
-    "message": "added label syncing logic",
-    "timestamp": "2019-03-19T13:44:59-04:00",
-    "url": "https://github.com/nicktate/probot-label-sync/commit/b11feaea964714c9c991abf8f5fec398bbfe6682",
+    "message": "move repositories into single yaml file. group under settings directory",
+    "timestamp": "2019-03-20T11:45:01-04:00",
+    "url": "https://github.com/nicktate/probot-label-sync/commit/d0a2cd9114ad77b3a396977effecf34bc15030e9",
     "author": {
       "name": "nicktate",
       "email": "ntate22@gmail.com",
@@ -60,19 +28,20 @@
       "username": "nicktate"
     },
     "added": [
-      "lib/github.js",
-      "repositories/containership/cloud.ui.yaml"
+      "settings/labels/base.yaml",
+      "settings/labels/components.yaml",
+      "settings/labels/providers.yaml",
+      "settings/repositories.yaml"
     ],
     "removed": [
-
+      "labels/base.yaml",
+      "labels/components.yaml",
+      "labels/providers.yaml",
+      "repositories/containership/cloud.ui.yaml",
+      "repositories/nicktate/dotfiles.yaml"
     ],
     "modified": [
-      "app.yml",
-      "index.js",
-      "lib/diffable.js",
-      "lib/labels.js",
-      "lib/repository.js",
-      "repositories/nicktate/dotfiles.yaml"
+      "index.js"
     ]
   },
   "repository": {
@@ -144,14 +113,14 @@
     "releases_url": "https://api.github.com/repos/nicktate/probot-label-sync/releases{/id}",
     "deployments_url": "https://api.github.com/repos/nicktate/probot-label-sync/deployments",
     "created_at": 1553005636,
-    "updated_at": "2019-03-19T15:57:39Z",
-    "pushed_at": 1553017552,
+    "updated_at": "2019-03-19T17:51:28Z",
+    "pushed_at": 1553096731,
     "git_url": "git://github.com/nicktate/probot-label-sync.git",
     "ssh_url": "git@github.com:nicktate/probot-label-sync.git",
     "clone_url": "https://github.com/nicktate/probot-label-sync.git",
     "svn_url": "https://github.com/nicktate/probot-label-sync",
     "homepage": null,
-    "size": 80,
+    "size": 94,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "JavaScript",

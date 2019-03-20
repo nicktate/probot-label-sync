@@ -3,7 +3,7 @@ const yaml = require('js-yaml')
 
 const Github = require('./lib/github')
 
-const SETTINGS_DIR_REGEX = /^(settings)\//
+const SETTINGS_DIR_REGEX = /^settings\//
 
 const buildLabelArray = (files) => {
   const labels = _.map(files, f => {
@@ -18,14 +18,14 @@ module.exports = (app, Repository = require('./lib/repository')) => {
     const payload = context.payload
     const defaultBranch = payload.ref === 'refs/heads/' + payload.repository.default_branch
 
-    const labelsOrReposModified = payload.commits.find(commit => {
+    const settingsModified = payload.commits.find(commit => {
       return _.some([
         ...commit.added,
         ...commit.modified
       ], c => SETTINGS_DIR_REGEX.test(c))
     })
 
-    if (defaultBranch && labelsOrReposModified) {
+    if (defaultBranch && settingsModified) {
       const labels = _.keyBy(await Github.getFilesRecursively(context.github, context.repo(), 'settings/labels'), 'path')
 
       const repoFile = await context.github.repos.getContents({
