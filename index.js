@@ -3,7 +3,7 @@ const yaml = require('js-yaml')
 
 const Github = require('./lib/github')
 
-const REPO_OR_LABEL_DIR_REGEX = /^(labels|repositories)\//
+const SETTINGS_DIR_REGEX = /^(settings)\//
 
 const buildLabelArray = (files) => {
   const labels = _.map(files, f => {
@@ -22,25 +22,32 @@ module.exports = (app, Repository = require('./lib/repository')) => {
       return _.some([
         ...commit.added,
         ...commit.modified
-      ], c => REPO_OR_LABEL_DIR_REGEX.test(c))
+      ], c => SETTINGS_DIR_REGEX.test(c))
     })
 
     if (defaultBranch && labelsOrReposModified) {
-      const labels = _.keyBy(await Github.getFilesRecursively(context.github, context.repo(), 'labels'), 'path')
-      const repos = await Github.getFilesRecursively(context.github, context.repo(), 'repositories')
+      const labels = _.keyBy(await Github.getFilesRecursively(context.github, context.repo(), 'settings/labels'), 'path')
 
-      for (const r of repos) {
-        // formatted /repositories/containership/example
-        // eslint-disable-next-line no-unused-vars
-        let [_ignore, org, name] = r.path.split('/')
-        // strip file extension
-        name = name.substring(0, name.indexOf('.yaml'))
+      const repoFile = await context.github.repos.getContents({
+        owner: context.repo().owner,
+        repo: context.repo().repo,
+        path: 'settings/repositories.yaml'
+      })
 
-        const labelPaths = _.map(yaml.safeLoad(r.content).labelGroups, l => `labels/${l}`)
-        const repoLabels = buildLabelArray(_.values(_.pick(labels, labelPaths)))
+      const repositories = yaml.safeLoad(Buffer.from(repoFile.content, repoFile.encoding).toString('utf8'))
 
-        console.info(`Syncing labels for ${org}/${name}...`)
-        await Repository.syncLabels(context.github, { owner: org, repo: name }, repoLabels)
+      for (const o of repositories.owners) {
+        const owner = o.name
+
+        for (const r of o.repositories) {
+          const repo = r.name
+
+          const labelPaths = _.map(r.labelGroups, l => `settings/labels/${l}`)
+          const repoLabels = buildLabelArray(_.values(_.pick(labels, labelPaths)))
+
+          console.info(`Syncing labels for ${owner}/${repo}...`)
+          await Repository.syncLabels(context.github, { owner, repo }, repoLabels)
+        }
       }
     } else {
       console.info('No repositories or labels were modified in latest push...')

@@ -1,0 +1,13 @@
+owners:
+	- name: containership
+		repositories:
+			- name: cloud.ui
+				labelGroups:
+					- base.yaml
+					- components.yaml
+					- providers.yaml
+	- name: nicktate
+		repositories:
+			- name: dotfiles
+				labelGroups:
+					- providers.yaml
