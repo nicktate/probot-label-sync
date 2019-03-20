@@ -34,7 +34,7 @@ module.exports = (app, Repository = require('./lib/repository')) => {
         path: 'settings/repositories.yaml'
       })
 
-      const repositories = yaml.safeLoad(Buffer.from(repoFile.content, repoFile.encoding).toString('utf8'))
+      const repositories = yaml.safeLoad(Buffer.from(repoFile.data.content, repoFile.data.encoding).toString('utf8'))
 
       for (const o of repositories.owners) {
         const owner = o.name
